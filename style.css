@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --orange:#F2C143;
+    --winning-blocks: #2d414b;
+}
+body{
+    color: var(--orange);
+    font-family: 'Finger Paint', cursive;
+}
+h1{
+    font-size: 3.375rem;
+    text-transform: uppercase;
+}
+.container{
+    height: 100vh;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #37505c;
+
+}
+#board{
+    width: 28.125rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
+}
+
+.box{
+    height: 9.375rem;
+    width: 9.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--orange);
+    font-size: 7.5rem;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+
+}
+
+.box:nth-child(3n){
+    border-right: none;
+}
+.box:nth-child(6) ~.box{
+    border-bottom: none;
+}
+#btn{
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.625rem;
+    background-color: var(--orange);
+    color: #333;
+    border-color: var(--orange);
+    font-size: 1.125rem;
+    transition: 200ms transform;
+    font-weight: 600;
+}
+#btn:hover{
+    cursor: pointer;
+    translate: 1px;
+    background-color: #c9a207;
+}
